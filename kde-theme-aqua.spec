@@ -13,8 +13,6 @@ Requires:	kdelibs
 Obsoletes:	kde-theme-Acqua
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		/usr/X11R6/man
 
 %description
 MacOS-like theme.
