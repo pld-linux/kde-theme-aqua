@@ -23,12 +23,12 @@ MacOS-like theme.
 Motyw przypominaj±cy MacOS.
 
 %package -n kde-style-%{_theme}
-Summary:        Acqua theme
-Summary(pl):    Motyw Aqua
-Group:          Themes
-Obsoletes:      kde-theme-acqua
-Obsoletes:      kde-theme-Acqua
-Requires:       kdelibs
+Summary:	Acqua theme
+Summary(pl):	Motyw Aqua
+Group:		Themes
+Obsoletes:	kde-theme-acqua
+Obsoletes:	kde-theme-Acqua
+Requires:	kdelibs
 
 %description -n kde-style-%{_theme}
 MacOS-like theme.
@@ -37,12 +37,12 @@ MacOS-like theme.
 Motyw przypominaj±cy MacOS.
 
 %package -n kde-icons-%{_theme}
-Summary:        KDE icon theme - %{_theme}
-Summary(pl):    Motyw ikon do KDE - %{_theme}
-Group:          Themes
+Summary:	KDE icon theme - %{_theme}
+Summary(pl):	Motyw ikon do KDE - %{_theme}
+Group:		Themes
 Obsoletes:	kde-theme-acqua
 Obsoletes:	kde-theme-Acqua
-Requires:       kdelibs
+Requires:	kdelibs
 
 %description -n kde-icons-%{_theme}
 The Aqua icon set to end all Aqua icon sets! 
@@ -53,13 +53,13 @@ Ten motyw ikon bije wszystkie inne motywy Aquy.
 Zawiera ponad 4,000 ikon w rozmiarach od 16x16 do 128x128.
 
 %package -n kde-wallpaper-%{_theme}
-Summary:        KDE wallpaper - %{_theme}
-Summary(pl):    Tapeta do KDE - %{_theme}
-Group:          Themes
+Summary:	KDE wallpaper - %{_theme}
+Summary(pl):	Tapeta do KDE - %{_theme}
+Group:		Themes
 # Contains /usr/share/wallpapers
-Obsoletes:      kde-theme-acqua
-Obsoletes:      kde-theme-Acqua
-Requires:       kdebase
+Obsoletes:	kde-theme-acqua
+Obsoletes:	kde-theme-Acqua
+Requires:	kdebase
 
 %description -n kde-wallpaper-%{_theme}
 A wallpaper to go with KDE %{_theme} style.
@@ -68,10 +68,10 @@ A wallpaper to go with KDE %{_theme} style.
 Tapeta pasuj±ca do stylu %{_theme} slicker.
 
 %package -n kde-decoration-%{_theme}
-Summary:        Icewm window decoration for kwin - %{_theme}
-Summary(pl):    Dekoracja icewm dla kwin - %{_theme}
-Group:          Themes
-Requires:       kde-decoration-icewm
+Summary:	Icewm window decoration for kwin - %{_theme}
+Summary(pl):	Dekoracja icewm dla kwin - %{_theme}
+Group:		Themes
+Requires:	kde-decoration-icewm
 
 %description -n kde-decoration-%{_theme}
 Icewm window decoration for kwin - %{_theme}.
