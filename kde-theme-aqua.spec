@@ -16,7 +16,6 @@ URL:		http://kde-look.org/content/show.php?content=153
 Requires:	kdelibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 MacOS-like theme.
 
@@ -49,9 +48,8 @@ Requires:       kdelibs
 The Aqua icon set to end all Aqua icon sets! 
 Includes over 4,000 icons in sizes from 16x16 to 128x128.
 
-
 %description -n kde-icons-%{_theme} -l pl
-Ten motyw ikon bije wszystkie inne motywy Aqua'y.
+Ten motyw ikon bije wszystkie inne motywy Aquy.
 Zawiera ponad 4,000 ikon w rozmiarach od 16x16 do 128x128.
 
 %package -n kde-wallpaper-%{_theme}
@@ -81,17 +79,12 @@ Icewm window decoration for kwin - %{_theme}.
 %description -n kde-decoration-%{_theme} -l pl
 Dekoracja icewm dla kwin - %{_theme}.
 
-
 %prep
-%setup  -q -n Acqua
-
-%build
-rm -f missing
+%setup -q -n Acqua
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
-install -d $RPM_BUILD_ROOT/{%{_datadir}/{wallpapers,apps/kstyle,apps/kthememgr/Themes,apps/kwin/icewm-themes},%{_iconsdir}}
+install -d $RPM_BUILD_ROOT{%{_datadir}/{wallpapers,apps/kstyle,apps/kthememgr/Themes,apps/kwin/icewm-themes},%{_iconsdir}}
 
 cp -pR style/{pixmaps,themes}	$RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 cp -pR style/wallpapers/*	$RPM_BUILD_ROOT%{_datadir}/wallpapers
@@ -119,7 +112,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kde-icons-%{_theme}
 %defattr(644,root,root,755)
-%{_iconsdir}/Aqua/*
+%{_iconsdir}/Aqua
 
 %files -n kde-wallpaper-%{_theme}
 %defattr(644,root,root,755)
