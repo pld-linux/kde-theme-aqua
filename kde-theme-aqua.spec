@@ -1,13 +1,11 @@
 
-# TODO: fix spec filename vs Name (kde-theme-acqua.spec vs kde-theme-aqua)
-
 %define		_theme	aqua
 
 Summary:	Aqua theme
 Summary(pl):	Motyw Aqua
 Name:		kde-theme-%{_theme}
 Version:	3.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/153-acqua-3.2.tar.bz2
