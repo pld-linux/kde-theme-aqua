@@ -31,10 +31,10 @@ Obsoletes:      kde-theme-acqua
 Obsoletes:      kde-theme-Acqua
 Requires:       kdelibs
 
-%description
+%description -n kde-style-%{_theme}
 MacOS-like theme.
 
-%description -l pl
+%description -n kde-style-%{_theme} -l pl
 Motyw przypominaj±cy MacOS.
 
 %package -n kde-icons-%{_theme}
@@ -69,6 +69,18 @@ A wallpaper to go with KDE %{_theme} style.
 %description -n kde-wallpaper-%{_theme} -l pl
 Tapeta pasuj±ca do stylu %{_theme} slicker.
 
+%package -n kde-decoration-%{_theme}
+Summary:        Icewm window decoration for kwin - %{_theme}
+Summary(pl):    Dekoracja icewm dla kwin - %{_theme}
+Group:          Themes
+Requires:       kde-decoration-icewm
+
+%description -n kde-decoration-%{_theme}
+Icewm window decoration for kwin - %{_theme}.
+
+%description -n kde-decoration-%{_theme} -l pl
+Dekoracja icewm dla kwin - %{_theme}.
+
 
 %prep
 %setup  -q -n Acqua
@@ -84,8 +96,7 @@ install -d $RPM_BUILD_ROOT/{%{_datadir}/{wallpapers,apps/kstyle,apps/kthememgr/T
 cp -pR style/{pixmaps,themes}	$RPM_BUILD_ROOT%{_datadir}/apps/kstyle
 cp -pR style/wallpapers/*	$RPM_BUILD_ROOT%{_datadir}/wallpapers
 
-cp -pR theme/Acqua.ktheme	$RPM_BUILD_ROOT%{_datadir}/apps/kthememgr/Themes
-cp -pR theme/Acqua		$RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
+cp -pR icewm-themes/Acqua		$RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
 
 %{__tar} xfz %{SOURCE1} -C $RPM_BUILD_ROOT%{_iconsdir}
 
@@ -101,8 +112,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc ReadMe ChangeLog
 %{_datadir}/apps/kstyle/pixmaps/*
 %{_datadir}/apps/kstyle/themes/*
-%{_iconsdir}/[!A]*
-%{_datadir}/apps/kthememgr/Themes/*
 
 %files -n kde-decoration-%{_theme}
 %defattr(644,root,root,755)
@@ -114,3 +123,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kde-wallpaper-%{_theme}
 %defattr(644,root,root,755)
+%{_datadir}/wallpapers/acqua.jpg
