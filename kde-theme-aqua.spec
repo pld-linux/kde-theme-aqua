@@ -45,7 +45,7 @@ Obsoletes:	kde-theme-Acqua
 Requires:	kdelibs
 
 %description -n kde-icons-%{_theme}
-The Aqua icon set to end all Aqua icon sets! 
+The Aqua icon set to end all Aqua icon sets!
 Includes over 4,000 icons in sizes from 16x16 to 128x128.
 
 %description -n kde-icons-%{_theme} -l pl
