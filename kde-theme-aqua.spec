@@ -3,17 +3,18 @@
 Summary:	Aqua theme
 Summary(pl):	Motyw Aqua
 Name:		kde-theme-%{_theme}
-Version:	1
-Release:	5
+Version:	3.2
+Release:	1
 License:	GPL
 Group:		Themes
-Source0:	http://www.kde-look.org/content/files/153-Acqua.tar.gz
-# Source0-md5:	3d8976d51710df0296c074ee9fa7112e
+Source0:	http://www.kde-look.org/content/files/153-acqua-3.2.tar.bz2
+# Source0-md5:	cd8a0ba106a6ad207e9858832856c23b
 Source1:	http://www.ecsis.net/%7Egregday/AQUA-ICONS-07-23-2003.tar.gz
 # Source1-md5:	0b1c1e0a8534c652c7f3c15bdd931718
 URL:		http://kde-look.org/content/show.php?content=153
 # Also:	http://www.kde-look.org/content/show.php?content=5057
 Requires:	kdelibs
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -59,7 +60,7 @@ Group:		Themes
 # Contains /usr/share/wallpapers
 Obsoletes:	kde-theme-acqua
 Obsoletes:	kde-theme-Acqua
-Requires:	kdebase
+Requires:	kdebase-core
 
 %description -n kde-wallpaper-%{_theme}
 A wallpaper to go with KDE %{_theme} style.
@@ -79,19 +80,42 @@ Icewm window decoration for kwin - %{_theme}.
 %description -n kde-decoration-%{_theme} -l pl
 Dekoracja icewm dla kwin - %{_theme}.
 
+%package -n kdm-pixmaps-%{_theme}
+Summary:	KDM users pixmaps - %{_theme}
+Summary(pl):	Grafiki u¿ytkowników dla KDM - %{_theme}
+Group:		Themes
+Requires:	kdm
+
+%description -n kdm-pixmaps-%{_theme}
+KDM users pixmaps - %{_theme}.
+
+%description -n kdm-pixmaps-%{_theme} -l pl
+Grafiki u¿ytkowników dla KDM - %{_theme}.
+
 %prep
-%setup -q -n Acqua
+%setup -q -a1 -n acqua-3.2
 
 %install
-rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_datadir}/{wallpapers,apps/kstyle,apps/kthememgr/Themes,apps/kwin/icewm-themes},%{_iconsdir}}
+install -d $RPM_BUILD_ROOT{%{_datadir}/{wallpapers,apps/{kstyle,kwin/icewm-themes,kdm/pics/users}},%{_iconsdir}/Aqua}
 
-cp -pR style/{pixmaps,themes}	$RPM_BUILD_ROOT%{_datadir}/apps/kstyle
-cp -pR style/wallpapers/*	$RPM_BUILD_ROOT%{_datadir}/wallpapers
+cp -pR {pixmaps,themes}		$RPM_BUILD_ROOT%{_datadir}/apps/kstyle/
+cp -pR wallpapers/*		$RPM_BUILD_ROOT%{_datadir}/wallpapers/
 
-cp -pR icewm-themes/Acqua		$RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
+cp -pR icewm-themes/Acqua	$RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
 
-%{__tar} xfz %{SOURCE1} -C $RPM_BUILD_ROOT%{_iconsdir}
+#%{__tar} xfz %{SOURCE1} -C $RPM_BUILD_ROOT%{_iconsdir}
+find Aqua -type d -name '.xvpics' \
+	-o -type d -name '.thumbnails' | xargs rm -rf
+
+cp -pR Aqua/16x16 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
+cp -pR Aqua/22x22 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
+cp -pR Aqua/32x32 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
+cp -pR Aqua/48x48 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
+cp -pR Aqua/64x64 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
+cp -pR Aqua/128x128 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
+install Aqua/index.desktop $RPM_BUILD_ROOT%{_iconsdir}/Aqua
+
+cp -pR Aqua/kdm/*.png $RPM_BUILD_ROOT%{_datadir}/apps/kdm/pics/users/
 
 %post
 echo "You may have to run kinstalltheme for this theme to become available"
@@ -102,7 +126,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kde-style-%{_theme}
 %defattr(644,root,root,755)
-%doc ReadMe ChangeLog
+%doc README AUTHORS ChangeLog
 %{_datadir}/apps/kstyle/pixmaps/*
 %{_datadir}/apps/kstyle/themes/*
 
@@ -116,4 +140,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kde-wallpaper-%{_theme}
 %defattr(644,root,root,755)
-%{_datadir}/wallpapers/acqua.jpg
+%{_datadir}/wallpapers/Acqua.jpg
+
+%files -n kdm-pixmaps-%{_theme}
+%defattr(644,root,root,755)
+%{_datadir}/apps/kdm/pics/users/*
