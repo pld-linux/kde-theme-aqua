@@ -8,6 +8,7 @@ Release:	4.5
 License:	GPL
 Group:		Themes/Gtk
 Source0:	153-Acqua.tar.gz
+# Source0-md5:	3d8976d51710df0296c074ee9fa7112e
 URL:		http://kde-look.org/content/show.php?content=153
 Requires:	kdelibs
 Obsoletes:	kde-theme-Acqua
