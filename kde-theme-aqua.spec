@@ -4,7 +4,7 @@ Summary:	Acqua theme
 Summary(pl):	Temat Acqua
 Name:		kde-theme-%{_theme}
 Version:	1
-Release:	3
+Release:	4
 License:	GPL
 Group:		Themes/Gtk
 Source0:	153-Acqua.tar.gz
@@ -37,6 +37,10 @@ cp -pR style/wallpapers/*	$RPM_BUILD_ROOT%{_pixmapsdir}
 
 cp -pR theme/Acqua.ktheme	$RPM_BUILD_ROOT%{_datadir}/apps/kthememgr/Themes
 cp -pR theme/%{_theme}		$RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
+
+%post
+echo "You may have to run kinstalltheme for this theme to become available"
+echo "in currently opened sessions."
 
 %clean
 rm -rf $RPM_BUILD_ROOT
