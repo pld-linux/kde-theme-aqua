@@ -1,4 +1,4 @@
-[# $Revision: 1.5.2.2 $, $Date: 2003-10-01 14:28:38 $
+[# $Revision: 1.5.2.3 $, $Date: 2003-10-01 14:30:25 $
 %define		_theme	acqua
 
 Summary:	Acqua theme
@@ -9,6 +9,7 @@ Release:	4.5
 License:	GPL
 Group:		Themes/Gtk
 Source0:	153-Acqua.tar.gz
+# Source0-md5:	3d8976d51710df0296c074ee9fa7112e
 URL:		http://kde-look.org/content/show.php?content=153
 Requires:	kdelibs
 Obsoletes:	kde-theme-Acqua
