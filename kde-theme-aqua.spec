@@ -1,3 +1,6 @@
+
+# TODO: fix spec filename vs Name (kde-theme-acqua.spec vs kde-theme-aqua)
+
 %define		_theme	aqua
 
 Summary:	Aqua theme
@@ -27,9 +30,9 @@ Motyw przypominaj±cy MacOS.
 Summary:	Acqua theme
 Summary(pl):	Motyw Aqua
 Group:		Themes
+Requires:	kdelibs
 Obsoletes:	kde-theme-acqua
 Obsoletes:	kde-theme-Acqua
-Requires:	kdelibs
 
 %description -n kde-style-%{_theme}
 MacOS-like theme.
@@ -41,9 +44,9 @@ Motyw przypominaj±cy MacOS.
 Summary:	KDE icon theme - %{_theme}
 Summary(pl):	Motyw ikon do KDE - %{_theme}
 Group:		Themes
+Requires:	kdelibs
 Obsoletes:	kde-theme-acqua
 Obsoletes:	kde-theme-Acqua
-Requires:	kdelibs
 
 %description -n kde-icons-%{_theme}
 The Aqua icon set to end all Aqua icon sets!
@@ -58,9 +61,9 @@ Summary:	KDE wallpaper - %{_theme}
 Summary(pl):	Tapeta do KDE - %{_theme}
 Group:		Themes
 # Contains /usr/share/wallpapers
+Requires:	kdebase-core
 Obsoletes:	kde-theme-acqua
 Obsoletes:	kde-theme-Acqua
-Requires:	kdebase-core
 
 %description -n kde-wallpaper-%{_theme}
 A wallpaper to go with KDE %{_theme} style.
@@ -85,7 +88,7 @@ Summary:	KDM users pixmaps - %{_theme}
 Summary(pl):	Grafiki u¿ytkowników dla KDM - %{_theme}
 Group:		Themes
 Requires:	kdm
-Obsoletes:	kdm-pixmaps-%{_theme}
+Obsoletes:	kdm-pixmaps-aqua
 
 %description -n kdm-user-pics-%{_theme}
 KDM users pixmaps - %{_theme}.
