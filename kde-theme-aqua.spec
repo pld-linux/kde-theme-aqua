@@ -4,7 +4,7 @@ Summary:	Aqua theme
 Summary(pl):	Motyw Aqua
 Name:		kde-theme-%{_theme}
 Version:	3.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/153-acqua-3.2.tar.bz2
@@ -80,16 +80,17 @@ Icewm window decoration for kwin - %{_theme}.
 %description -n kde-decoration-%{_theme} -l pl
 Dekoracja icewm dla kwin - %{_theme}.
 
-%package -n kdm-pixmaps-%{_theme}
+%package -n kdm-user-pics-%{_theme}
 Summary:	KDM users pixmaps - %{_theme}
 Summary(pl):	Grafiki u¿ytkowników dla KDM - %{_theme}
 Group:		Themes
 Requires:	kdm
+Obsoletes:	kdm-pixmaps-%{_theme}
 
-%description -n kdm-pixmaps-%{_theme}
+%description -n kdm-user-pics-%{_theme}
 KDM users pixmaps - %{_theme}.
 
-%description -n kdm-pixmaps-%{_theme} -l pl
+%description -n kdm-user-pics-%{_theme} -l pl
 Grafiki u¿ytkowników dla KDM - %{_theme}.
 
 %prep
@@ -142,6 +143,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_datadir}/wallpapers/Acqua.jpg
 
-%files -n kdm-pixmaps-%{_theme}
+%files -n kdm-user-pics-%{_theme}
 %defattr(644,root,root,755)
 %{_datadir}/apps/kdm/pics/users/*
