@@ -12,6 +12,7 @@ Source0:	http://www.kde-look.org/content/files/153-Acqua.tar.gz
 Source1:	http://www.ecsis.net/%7Egregday/AQUA-ICONS-07-23-2003.tar.gz
 # Source1-md5:	0b1c1e0a8534c652c7f3c15bdd931718
 URL:		http://kde-look.org/content/show.php?content=153
+# Also:	http://www.kde-look.org/content/show.php?content=5057
 Requires:	kdelibs
 Obsoletes:	kde-theme-Acqua
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,6 +23,21 @@ MacOS-like theme.
 
 %description -l pl
 Motyw przypominaj±cy MacOS.
+
+%package -n kde-icons-%{_theme}
+Summary:        KDE icon theme - %{_theme}
+Summary(pl):    Motyw ikon do KDE - %{_theme}
+Group:          Themes
+Requires:       kdelibs
+
+%description -n kde-icons-%{_theme}
+The Aqua icon set to end all Aqua icon sets! 
+Includes over 4,000 icons in sizes from 16x16 to 128x128.
+
+
+%description -n kde-icons-%{_theme} -l pl
+Ten motyw ikon bije wszystkie inne motywy Aqua'y.
+Zawiera ponad 4,000 ikon w rozmiarach od 16x16 do 128x128.
 
 %prep
 %setup  -q -n Acqua
@@ -54,6 +70,10 @@ rm -rf $RPM_BUILD_ROOT
 %doc ReadMe ChangeLog
 %{_datadir}/apps/kstyle/pixmaps/*
 %{_datadir}/apps/kstyle/themes/*
-%{_iconsdir}/*
+#%%{_iconsdir}/*
 %{_datadir}/apps/kthememgr/Themes/*
 %{_datadir}/apps/kwin/icewm-themes/*
+
+%files -n kde-icons-%{_theme}
+%defattr(644,root,root,755)
+%{_iconsdir}/Aqua/*
