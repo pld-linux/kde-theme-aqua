@@ -1,7 +1,7 @@
 %define		_theme	acqua
 
 Summary:	Acqua theme
-Summary(pl):	Temat Acqua
+Summary(pl):	Motyw Acqua
 Name:		kde-theme-%{_theme}
 Version:	1
 Release:	4.5
@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 MacOS-like theme.
 
 %description -l pl
-Temat przypominaj±cy MacOS.
+Motyw przypominaj±cy MacOS.
 
 %prep
 %setup  -q -n Acqua
