@@ -5,7 +5,7 @@ Summary:	Aqua theme
 Summary(pl):	Motyw Aqua
 Name:		kde-theme-%{_theme}
 Version:	3.2
-Release:	3
+Release:	4
 License:	GPL
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/153-acqua-3.2.tar.bz2
@@ -15,6 +15,11 @@ Source1:	http://www.ecsis.net/%7Egregday/AQUA-ICONS-07-23-2003.tar.gz
 URL:		http://kde-look.org/content/show.php?content=153
 # Also:	http://www.kde-look.org/content/show.php?content=5057
 Requires:	kdelibs
+Requires:	kde-style-%{_theme}
+Requires:	kde-decoration-%{_theme}
+Requires:	kde-icons-%{_theme}
+Requires:	kde-wallpaper-%{_theme}
+Requires:	kdm-user-pics-%{_theme}
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -125,6 +130,8 @@ echo "in currently opened sessions."
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%files
 
 %files -n kde-style-%{_theme}
 %defattr(644,root,root,755)
