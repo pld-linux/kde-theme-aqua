@@ -2,7 +2,7 @@
 %define		_theme	aqua
 
 Summary:	Aqua theme
-Summary(pl):	Motyw Aqua
+Summary(pl.UTF-8):   Motyw Aqua
 Name:		kde-theme-%{_theme}
 Version:	3.2
 Release:	4
@@ -26,12 +26,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 MacOS-like theme.
 
-%description -l pl
-Motyw przypominaj±cy MacOS.
+%description -l pl.UTF-8
+Motyw przypominajÄ…cy MacOS.
 
 %package -n kde-style-%{_theme}
 Summary:	Acqua theme
-Summary(pl):	Motyw Aqua
+Summary(pl.UTF-8):   Motyw Aqua
 Group:		Themes
 Requires:	kdelibs
 Obsoletes:	kde-theme-acqua
@@ -40,12 +40,12 @@ Obsoletes:	kde-theme-Acqua
 %description -n kde-style-%{_theme}
 MacOS-like theme.
 
-%description -n kde-style-%{_theme} -l pl
-Motyw przypominaj±cy MacOS.
+%description -n kde-style-%{_theme} -l pl.UTF-8
+Motyw przypominajÄ…cy MacOS.
 
 %package -n kde-icons-%{_theme}
 Summary:	KDE icon theme - %{_theme}
-Summary(pl):	Motyw ikon do KDE - %{_theme}
+Summary(pl.UTF-8):   Motyw ikon do KDE - %{_theme}
 Group:		Themes
 Requires:	kdelibs
 Obsoletes:	kde-theme-acqua
@@ -55,13 +55,13 @@ Obsoletes:	kde-theme-Acqua
 The Aqua icon set to end all Aqua icon sets!
 Includes over 4,000 icons in sizes from 16x16 to 128x128.
 
-%description -n kde-icons-%{_theme} -l pl
+%description -n kde-icons-%{_theme} -l pl.UTF-8
 Ten motyw ikon bije wszystkie inne motywy Aquy.
 Zawiera ponad 4,000 ikon w rozmiarach od 16x16 do 128x128.
 
 %package -n kde-wallpaper-%{_theme}
 Summary:	KDE wallpaper - %{_theme}
-Summary(pl):	Tapeta do KDE - %{_theme}
+Summary(pl.UTF-8):   Tapeta do KDE - %{_theme}
 Group:		Themes
 # Contains /usr/share/wallpapers
 Requires:	kdebase-core
@@ -71,24 +71,24 @@ Obsoletes:	kde-theme-Acqua
 %description -n kde-wallpaper-%{_theme}
 A wallpaper to go with KDE %{_theme} style.
 
-%description -n kde-wallpaper-%{_theme} -l pl
-Tapeta pasuj±ca do stylu %{_theme} slicker.
+%description -n kde-wallpaper-%{_theme} -l pl.UTF-8
+Tapeta pasujÄ…ca do stylu %{_theme} slicker.
 
 %package -n kde-decoration-%{_theme}
 Summary:	Icewm window decoration for kwin - %{_theme}
-Summary(pl):	Dekoracja icewm dla kwin - %{_theme}
+Summary(pl.UTF-8):   Dekoracja icewm dla kwin - %{_theme}
 Group:		Themes
 Requires:	kde-decoration-icewm
 
 %description -n kde-decoration-%{_theme}
 Icewm window decoration for kwin - %{_theme}.
 
-%description -n kde-decoration-%{_theme} -l pl
+%description -n kde-decoration-%{_theme} -l pl.UTF-8
 Dekoracja icewm dla kwin - %{_theme}.
 
 %package -n kdm-user-pics-%{_theme}
 Summary:	KDM users pixmaps - %{_theme}
-Summary(pl):	Grafiki u¿ytkowników dla KDM - %{_theme}
+Summary(pl.UTF-8):   Grafiki uÅ¼ytkownikÃ³w dla KDM - %{_theme}
 Group:		Themes
 Requires:	kdm
 Obsoletes:	kdm-pixmaps-aqua
@@ -96,8 +96,8 @@ Obsoletes:	kdm-pixmaps-aqua
 %description -n kdm-user-pics-%{_theme}
 KDM users pixmaps - %{_theme}.
 
-%description -n kdm-user-pics-%{_theme} -l pl
-Grafiki u¿ytkowników dla KDM - %{_theme}.
+%description -n kdm-user-pics-%{_theme} -l pl.UTF-8
+Grafiki uÅ¼ytkownikÃ³w dla KDM - %{_theme}.
 
 %prep
 %setup -q -a1 -n acqua-3.2
