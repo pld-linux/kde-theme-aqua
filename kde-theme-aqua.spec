@@ -2,7 +2,7 @@
 %define		_theme	aqua
 
 Summary:	Aqua theme
-Summary(pl.UTF-8):   Motyw Aqua
+Summary(pl.UTF-8):	Motyw Aqua
 Name:		kde-theme-%{_theme}
 Version:	3.2
 Release:	4
@@ -31,7 +31,7 @@ Motyw przypominający MacOS.
 
 %package -n kde-style-%{_theme}
 Summary:	Acqua theme
-Summary(pl.UTF-8):   Motyw Aqua
+Summary(pl.UTF-8):	Motyw Aqua
 Group:		Themes
 Requires:	kdelibs
 Obsoletes:	kde-theme-acqua
@@ -45,7 +45,7 @@ Motyw przypominający MacOS.
 
 %package -n kde-icons-%{_theme}
 Summary:	KDE icon theme - %{_theme}
-Summary(pl.UTF-8):   Motyw ikon do KDE - %{_theme}
+Summary(pl.UTF-8):	Motyw ikon do KDE - %{_theme}
 Group:		Themes
 Requires:	kdelibs
 Obsoletes:	kde-theme-acqua
@@ -61,7 +61,7 @@ Zawiera ponad 4,000 ikon w rozmiarach od 16x16 do 128x128.
 
 %package -n kde-wallpaper-%{_theme}
 Summary:	KDE wallpaper - %{_theme}
-Summary(pl.UTF-8):   Tapeta do KDE - %{_theme}
+Summary(pl.UTF-8):	Tapeta do KDE - %{_theme}
 Group:		Themes
 # Contains /usr/share/wallpapers
 Requires:	kdebase-core
@@ -76,7 +76,7 @@ Tapeta pasująca do stylu %{_theme} slicker.
 
 %package -n kde-decoration-%{_theme}
 Summary:	Icewm window decoration for kwin - %{_theme}
-Summary(pl.UTF-8):   Dekoracja icewm dla kwin - %{_theme}
+Summary(pl.UTF-8):	Dekoracja icewm dla kwin - %{_theme}
 Group:		Themes
 Requires:	kde-decoration-icewm
 
@@ -88,7 +88,7 @@ Dekoracja icewm dla kwin - %{_theme}.
 
 %package -n kdm-user-pics-%{_theme}
 Summary:	KDM users pixmaps - %{_theme}
-Summary(pl.UTF-8):   Grafiki użytkowników dla KDM - %{_theme}
+Summary(pl.UTF-8):	Grafiki użytkowników dla KDM - %{_theme}
 Group:		Themes
 Requires:	kdm
 Obsoletes:	kdm-pixmaps-aqua
