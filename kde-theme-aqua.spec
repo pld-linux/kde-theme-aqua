@@ -103,6 +103,7 @@ Grafiki użytkowników dla KDM - %{_theme}.
 %setup -q -a1 -n acqua-3.2
 
 %install
+rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_datadir}/{wallpapers,apps/{kstyle,kwin/icewm-themes,kdm/pics/users}},%{_iconsdir}/Aqua}
 
 cp -pR {pixmaps,themes}		$RPM_BUILD_ROOT%{_datadir}/apps/kstyle/
