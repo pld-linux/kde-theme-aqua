@@ -10,7 +10,7 @@ License:	GPL
 Group:		Themes
 Source0:	http://www.kde-look.org/content/files/153-acqua-3.2.tar.bz2
 # Source0-md5:	cd8a0ba106a6ad207e9858832856c23b
-Source1:	http://www.ecsis.net/%7Egregday/AQUA-ICONS-07-23-2003.tar.gz
+Source1:	http://www.ecsis.net/~gregday/AQUA-ICONS-07-23-2003.tar.gz
 # Source1-md5:	0b1c1e0a8534c652c7f3c15bdd931718
 URL:		http://kde-look.org/content/show.php?content=153
 # Also:	http://www.kde-look.org/content/show.php?content=5057
@@ -30,7 +30,7 @@ MacOS-like theme.
 Motyw przypominający MacOS.
 
 %package -n kde-style-%{_theme}
-Summary:	Acqua theme
+Summary:	Aqua theme
 Summary(pl.UTF-8):	Motyw Aqua
 Group:		Themes
 Requires:	kdelibs
@@ -113,7 +113,7 @@ cp -pR icewm-themes/Acqua	$RPM_BUILD_ROOT%{_datadir}/apps/kwin/icewm-themes
 
 #%{__tar} xfz %{SOURCE1} -C $RPM_BUILD_ROOT%{_iconsdir}
 find Aqua -type d -name '.xvpics' \
-	-o -type d -name '.thumbnails' | xargs rm -rf
+	-o -type d -name '.thumbnails' | xargs %{__rm} -r
 
 cp -pR Aqua/16x16 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
 cp -pR Aqua/22x22 $RPM_BUILD_ROOT%{_iconsdir}/Aqua
@@ -125,24 +125,24 @@ install Aqua/index.desktop $RPM_BUILD_ROOT%{_iconsdir}/Aqua
 
 cp -pR Aqua/kdm/*.png $RPM_BUILD_ROOT%{_datadir}/apps/kdm/pics/users/
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %post
 echo "You may have to run kinstalltheme for this theme to become available"
 echo "in currently opened sessions."
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 
 %files -n kde-style-%{_theme}
 %defattr(644,root,root,755)
 %doc README AUTHORS ChangeLog
-%{_datadir}/apps/kstyle/pixmaps/*
-%{_datadir}/apps/kstyle/themes/*
+%{_datadir}/apps/kstyle/pixmaps/acqua
+%{_datadir}/apps/kstyle/themes/acqua.themerc
 
 %files -n kde-decoration-%{_theme}
 %defattr(644,root,root,755)
-%{_datadir}/apps/kwin/icewm-themes/*
+%{_datadir}/apps/kwin/icewm-themes/Acqua
 
 %files -n kde-icons-%{_theme}
 %defattr(644,root,root,755)
@@ -154,4 +154,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -n kdm-user-pics-%{_theme}
 %defattr(644,root,root,755)
-%{_datadir}/apps/kdm/pics/users/*
+%{_datadir}/apps/kdm/pics/users/*.png
